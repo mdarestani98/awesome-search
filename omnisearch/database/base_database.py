@@ -6,7 +6,7 @@ class DatabaseAPI(ABC):
         self.api_key = api_key
 
     @abstractmethod
-    def search(self, query: str, count: int):
+    def search(self, query: str):
         pass
 
     @abstractmethod

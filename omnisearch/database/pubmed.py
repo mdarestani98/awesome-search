@@ -1,5 +1,4 @@
 import logging
-import os
 from typing import List, Union
 
 import pandas as pd
@@ -151,6 +150,7 @@ if __name__ == '__main__':
              'OR "attention deficit disorder*" OR "hyperkinetic disorder*" OR "hyperkinetic syndrome*") '
              'AND ("meta- analy*" OR meta-analysis)')
     from dotenv import load_dotenv
+    import os
     load_dotenv()
     pubmed = PubMed(api_key=os.getenv('NCBI_API_KEY'), email=os.getenv('NCBI_EMAIL'))
     id_list = pubmed.search(query, count=200)
